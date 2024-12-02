@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
 
-
+//gitről
     
 
     private lateinit var openGreetingButton:Button;
