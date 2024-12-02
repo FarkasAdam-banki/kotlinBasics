@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">kotlinBasics</string>
+    <string name="title_activity_greetings">GreetingsActivity</string>
+</resources>
