@@ -16,6 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class WeatherActivity : AppCompatActivity() {
 
     private lateinit var textviewTemp: TextView  // TextView deklaráció
+    private lateinit var textviewTempMin: TextView
     private val apikey = "c9eb0a037a09902fbb9ce6afeaa9fba2"  // API kulcs
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,7 @@ class WeatherActivity : AppCompatActivity() {
 
         // TextView inicializálás a layout-ból
         textviewTemp = findViewById(R.id.textview_temp)
-
+        textviewTempMin = findViewById(R.id.textview_tempmin)
         fetchWeatherData()  // Időjárás adatainak lekérése
     }
 
@@ -45,7 +46,11 @@ class WeatherActivity : AppCompatActivity() {
                     val weatherResponse = response.body()
                     if (weatherResponse != null) {
                         val weatherInfo = weatherResponse.main.temp
-                        textviewTemp.text = weatherInfo.toString()  // Kiírás a TextView-ba
+                        val weatherInfoMin = weatherResponse.main.temp_min
+
+
+                        textviewTemp.text = "Aktuális hőmérséklet: ${weatherInfo}°C"
+                        textviewTempMin.text = "Minimum hőmérséklet: ${weatherInfoMin}°C"
                     }
                 } else {
                     Log.e("WeatherActivity", "Hibás válasz: ${response.code()}")
