@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var openGreetingButton:Button;
     private lateinit var openCalculatorButton: Button;
-
+    private lateinit var openWeatherButton: Button;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,13 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         openGreetingButton = findViewById(R.id.openGreetingButton)
         openCalculatorButton = findViewById(R.id.openCalculatorButton)
-
+        openWeatherButton = findViewById(R.id.openWeatherButton)
         openGreetingButton.setOnClickListener(){
             val intent = Intent(this,GreetingsActivity::class.java)
             startActivity(intent)
         }
         openCalculatorButton.setOnClickListener(){
             val intent = Intent(this,CalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        openWeatherButton.setOnClickListener(){
+            val intent = Intent(this,WeatherActivity::class.java)
             startActivity(intent)
         }
    }
