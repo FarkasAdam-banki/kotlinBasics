@@ -23,4 +23,11 @@
         android:text="Calculator"
         android:layout_marginHorizontal="30dp"/>
 
+    <Button
+        android:id="@+id/openWeatherButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather"
+        android:layout_marginHorizontal="30dp"/>
+
 </LinearLayout>
