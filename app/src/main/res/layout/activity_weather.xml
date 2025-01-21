@@ -24,7 +24,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="minmumum idő"
+        android:text="Páratartalom"
         android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textview_windSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Szél sebesség"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Írja be a város nevét"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/button_getWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Időjárás lekérése"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"/>
 
 </LinearLayout>
