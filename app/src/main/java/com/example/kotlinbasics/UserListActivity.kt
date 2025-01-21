@@ -5,7 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlinbasics.adapter.UserAdapter
 import com.example.kotlinbasics.model.User
 
 class UserListActivity : AppCompatActivity() {
@@ -30,6 +32,8 @@ class UserListActivity : AppCompatActivity() {
             User("Sipos Dániel", "sd@email.com", R.drawable.user)
         )
         val recyclerView:RecyclerView = findViewById(R.id.userListRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = UserAdapter(users)
 
 
     }

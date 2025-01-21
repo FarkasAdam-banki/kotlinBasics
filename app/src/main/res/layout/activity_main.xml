@@ -30,4 +30,11 @@
         android:text="Weather"
         android:layout_marginHorizontal="30dp"/>
 
+    <Button
+        android:id="@+id/openUserListButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UserList"
+        android:layout_marginHorizontal="30dp"/>
+
 </LinearLayout>
