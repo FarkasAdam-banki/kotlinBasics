@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var openCalculatorButton: Button;
     private lateinit var openWeatherButton: Button;
     private lateinit var openUserListButton: Button;
+    private lateinit var randomOpenUserListButton:Button;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         openCalculatorButton = findViewById(R.id.openCalculatorButton)
         openWeatherButton = findViewById(R.id.openWeatherButton)
         openUserListButton = findViewById(R.id.openUserListButton)
+        randomOpenUserListButton = findViewById(R.id.randomOpenUserListButton)
         openGreetingButton.setOnClickListener(){
             val intent = Intent(this,GreetingsActivity::class.java)
             startActivity(intent)
@@ -45,6 +47,10 @@ class MainActivity : AppCompatActivity() {
         }
         openUserListButton.setOnClickListener(){
             val intent = Intent(this,UserListActivity::class.java)
+            startActivity(intent)
+        }
+        randomOpenUserListButton.setOnClickListener(){
+            val intent = Intent(this,RandomUserListActivity::class.java)
             startActivity(intent)
         }
    }
