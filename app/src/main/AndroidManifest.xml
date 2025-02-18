@@ -15,6 +15,9 @@
         android:theme="@style/Theme.KotlinBasics"
         tools:targetApi="31">
         <activity
+            android:name=".CountActivity"
+            android:exported="false" />
+        <activity
             android:name=".RandomUserListActivity"
             android:exported="false" />
         <activity
